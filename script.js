@@ -43,14 +43,14 @@ function setBackground() {
     var time = new Date();
     var hour = time.getHours();                                                             
 
-    if (hour > 18 && hour < 24) {
+    if (hour >= 18 && hour < 24) {
         document.getElementById("background").className = "evening";
 
-    } else if (hour > 0 && hour < 6) {
+    } else if (hour >= 0 && hour < 6) {
         document.getElementById("background").className = "night";
         
 
-    } else if (hour > 6 && hour < 12) {
+    } else if (hour >= 6 && hour < 12) {
         document.getElementById("background").className = "morning";
 
     } else {                                                                       
