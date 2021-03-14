@@ -1,4 +1,4 @@
-// Clock showing local earth time
+// Clock settings
 
 function whatTimeIsIt() {
 
@@ -20,12 +20,15 @@ function whatTimeIsIt() {
     // Displays the result of the element id="displayTime"
     var currentTime = hour + "  :  " + minute + "  :  " + second;
     document.getElementById("displayTime").innerHTML = currentTime;
-    var t = setTimeout(whatTimeIsIt, 1200);
+
+    // checks the time every 1200 milliseconds
+    setTimeout(whatTimeIsIt, 1200);
 }
 
 whatTimeIsIt();
 
 
+// Date settings
 var today = new Date();
 
 var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
@@ -34,3 +37,23 @@ var months = new Array('January', 'February', 'March', 'April', 'May', 'June', '
 document.getElementById('date').innerHTML = today.getDate() + ' ' + months[today.getMonth()] + ' ' +today.getFullYear();
 
 
+// Background settings
+
+function setBackground() {
+    var time = new Date();
+    var hour = time.getHours();                                                             
+
+    if (hour > 18 || hour < 24) {
+        document.getElementById("background").className = "evening";
+
+    } else if (hour > 24 && hour < 6) {
+        document.getElementById("background").className = "night";
+        
+
+    } else if (hour > 6 && hour < 12) {
+        document.getElementById("background").className = "morning";
+
+    } else {                                                                       
+        document.getElementById("background").className = "day";
+    }
+} setInterval(setBackground, 1000);

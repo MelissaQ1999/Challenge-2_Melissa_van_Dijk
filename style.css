@@ -31,7 +31,38 @@ body {
 
 
 /* Setting the background */
+.evening {
+    background-image: url("images/Evening.jpg"); 
+    width: 320px;
+    /* For when the CSS-line above doesn't work */
+    /* background-color: rgb(255,166,16);
+    background: linear-gradient(0deg, rgba(255,166,16,1) 0%, rgba(255,77,41,1) 25%, rgba(125,0,73,1) 56%, rgba(24,0,28,1) 100%); */
+    /* background-size: 100vw 100vh; */
+}
 
+.night {
+    background-image: url("images/Night.jpg");
+    /* For when the CSS-line above doesn't work */
+    background-color: rgb(0,129,157);
+    background: linear-gradient(0deg, rgba(0,129,157,1) 0%, rgba(0,30,73,1) 50%, rgba(0,0,8,1) 100%);
+    background-size: 100vw 100vh;
+}
+
+.morning {
+    background-image: url("images/Morning.jpg");
+    /* For when the CSS-line above doesn't work */
+    background-color: rgb(255,166,16);
+    background: linear-gradient(0deg, rgba(255,166,16,1) 0%, rgba(255,77,41,1) 33%, rgba(133,39,111,1) 66%, rgba(94,0,177,1) 100%);  
+    background-size: 100vw 100vh;  
+}
+
+.day {
+    background-image: url("images/Day.jpg");
+    /* For when the CSS-line above doesn't work */
+    background-color: rgb(211,243,255);
+    background: linear-gradient(0deg, rgba(211,243,255,1) 0%, rgba(169,213,255,1) 50%, rgba(107,124,255,1) 100%);
+    background-size: 100vw 100vh;
+}
 
 
 /* Header */
@@ -65,7 +96,7 @@ body {
 }
 
 section {
-    background-color:rgb(255, 255, 255, 1);
+    background-color:rgb(255, 255, 255, 0.6);
     border-radius: 10px;
     padding: 10px;
 }
