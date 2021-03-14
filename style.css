@@ -29,38 +29,39 @@ body {
     padding: 15px;
 }
 
+html {
+    height: 85%;
+    width: 100%;
+}
+
 
 /* Setting the background */
 .evening {
     background-image: url("images/Evening.jpg"); 
-    height: 700px;
+    background-size: 450%;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .night {
     background-image: url("images/Night.jpg");
-    height: 100%;
+    background-size: 450%;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .morning {
     background-image: url("images/Morning.jpg");
-    height: 700px;
+    background-size: 450%;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .day {
     background-image: url("images/Day.jpg");
-    height: 700px;
+    background-size: 450%;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 
@@ -118,4 +119,40 @@ section {
     line-height: 24px;
     margin-top: 10px;
     text-align: center;
+}
+
+
+@media only screen and (min-width: 500px){
+    .evening {
+        background-size: 340%;
+    }
+
+}
+
+@media only screen and (min-width: 650px){
+    .evening {
+        background-size: 260%;
+    }
+
+}
+
+@media only screen and (min-width: 800px){
+    .evening {
+        background-size: 210%;
+    }
+
+}
+
+@media only screen and (min-width: 1100px){
+    .evening {
+        background-size: 150%;
+    }
+
+}
+
+@media only screen and (min-width: 1400px){
+    .evening {
+        background-size: 100%;
+    }
+
 }

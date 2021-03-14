@@ -23,6 +23,28 @@ function whatTimeIsIt() {
 
     // checks the time every 1200 milliseconds
     setTimeout(whatTimeIsIt, 1200);
+
+
+    // Background settings
+
+    switch(true){
+        case (hour >= 18 && hour < 24): //UREN
+            document.getElementById("background").className = "evening";
+            break;
+
+        case (hour >= 0 && hour < 6): //UREN
+            document.getElementById("background").className = "night";
+            break;
+                
+        case (hour >= 6 && hour < 12): //UREN
+            document.getElementById("background").className = "morning";
+            break;
+
+        case (hour >= 12 && hour < 18): //UREN
+            document.getElementById("background").className = "day";
+            break;
+
+    };
 }
 
 whatTimeIsIt();
@@ -35,25 +57,3 @@ var months = new Array('January', 'February', 'March', 'April', 'May', 'June', '
 
 // Displays the result of the element id="date"
 document.getElementById('date').innerHTML = today.getDate() + ' ' + months[today.getMonth()] + ' ' +today.getFullYear();
-
-
-// Background settings
-
-function setBackground() {
-    var time = new Date();
-    var hour = time.getHours();                                                             
-
-    if (hour >= 18 && hour < 24) {
-        document.getElementById("background").className = "evening";
-
-    } else if (hour >= 0 && hour < 6) {
-        document.getElementById("background").className = "night";
-        
-
-    } else if (hour >= 6 && hour < 12) {
-        document.getElementById("background").className = "morning";
-
-    } else {                                                                       
-        document.getElementById("background").className = "day";
-    }
-} setInterval(setBackground, 1000);
