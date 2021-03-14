@@ -4,15 +4,21 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Challenge 2 - SpaceX</title>
+        <title>Challenge 2 - SpaceX clock</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="script" src="script.js" defer></script>
+        <script src="script.js" defer></script>
     </head>
-    <body>
+    <body id="background">
         <header>
             <img src="images/SpaceX_Logo_White.png" alt="SpaceX logo" class ="logo">
         </header>
-        <main>
+        <main class="dashboard-clock">
+
+            <!-- Clock showing local earth time -->
+            <section class="data-clock">
+                <div id="displayTime"></div>
+                <div id="date"></div>
+            </section>
 
         </main> 
     </body>
