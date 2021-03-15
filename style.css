@@ -37,31 +37,45 @@ html {
 
 /* Setting the background */
 .evening {
+    /* Location of the image */
     background-image: url("images/Evening.jpg"); 
-    background-size: 450%;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center; 
+    /* Do not repeat the image */
+    background-repeat: no-repeat; 
+    /* Background image is fixed in the viewport so that it doesn’t move when the content’s height is greater than the image’s height */
+    background-attachment: fixed;
+    /* Resize the background image to cover the entire container */
+    background-size: cover; 
+    /* Set a background color that will be displayed while the background image is loading */
+    background-color: rgb(125, 0, 73);
 }
 
 .night {
     background-image: url("images/Night.jpg");
-    background-size: 450%;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover; 
+    background-color: rgb(0, 30, 73);
 }
 
 .morning {
     background-image: url("images/Morning.jpg");
-    background-size: 450%;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover; 
+    background-color: rgb(255, 77, 41);
 }
 
 .day {
     background-image: url("images/Day.jpg");
-    background-size: 450%;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover; 
+    background-color: rgb(169, 213, 255);
 }
 
 
@@ -122,37 +136,29 @@ section {
 }
 
 
-@media only screen and (min-width: 500px){
-    .evening {
-        background-size: 340%;
-    }
+/* The breakpoints */
 
-}
+/* Intermediate version of mobile and tablet (450px) */
+/* @media (min-width: 450px) {
+    
+} */
 
-@media only screen and (min-width: 650px){
-    .evening {
-        background-size: 260%;
-    }
+/* Tablet version (768px) */
+/* @media (min-width: 768px) {
+   
+} */
 
-}
+/* Laptop version (1024px) */
+/* @media (min-width: 1024px) {
+    
+} */
 
-@media only screen and (min-width: 800px){
-    .evening {
-        background-size: 210%;
-    }
+/* Intermediate version of laptop and desktop (1280px) */
+/* @media (min-width: 1280PX) {
+    
+} */
 
-}
-
-@media only screen and (min-width: 1100px){
-    .evening {
-        background-size: 150%;
-    }
-
-}
-
-@media only screen and (min-width: 1400px){
-    .evening {
-        background-size: 100%;
-    }
-
-}
+/* Desktop version (1920px) */
+/* @media (min-width: 1920PX) {
+    
+} */
