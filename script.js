@@ -8,45 +8,45 @@ function whatTimeIsIt() {
 	var minute = time.getMinutes();
 	var second = time.getSeconds();
 
-	// hours: add leading zero
+	// Hours: add leading zero
     hour = hour < 10 ? "0" + hour : hour;
 
-	// minutes: add leading zero
+	// Minutes: add leading zero
 	minute = minute < 10 ? "0" + minute : minute;
     
-    // seconds: add leading zero
+    // Seconds: add leading zero
     second = second < 10 ? "0" + second : second;
 
     // Displays the result of the element id="displayTime"
     var currentTime = hour + "  :  " + minute + "  :  " + second;
     document.getElementById("displayTime").innerHTML = currentTime;
 
-    // checks the time every 1200 milliseconds
+    // Checks the time every 1200 milliseconds
     setTimeout(whatTimeIsIt, 1200);
 
 
     // Background settings
 
     switch(true){
-        case (hour >= 18 && hour < 24): //UREN
+        case (hour >= 18 && hour < 24): //Hours
             document.getElementById("background").className = "evening";
-            document.getElementById("cloudDay").src = "images/Cloud_evening.png";
+            document.getElementById("cloudDay").src = "images/Cloud_evening.png";// Changes the clouds img
             document.getElementById("cloudDay").className = "cloudEvening";
             break;
 
-        case (hour >= 0 && hour < 6): //UREN
+        case (hour >= 0 && hour < 6): //Hours
             document.getElementById("background").className = "night";
-            document.getElementById("cloudDay").src = "images/Cloud_night.png";
+            document.getElementById("cloudDay").src = "images/Cloud_night.png";// Changes the clouds img
             document.getElementById("cloudDay").className = "cloudNight";
             break;
                 
-        case (hour >= 6 && hour < 12): //UREN
+        case (hour >= 6 && hour < 12): //Hours
             document.getElementById("background").className = "morning";
-            document.getElementById("cloudDay").src = "images/Cloud_morning.png";
+            document.getElementById("cloudDay").src = "images/Cloud_morning.png";// Changes the clouds img
             document.getElementById("cloudDay").className = "cloudMorning";
             break;
 
-        case (hour >= 12 && hour < 18): //UREN
+        case (hour >= 12 && hour < 18): //Hours
             document.getElementById("background").className = "day";
             document.getElementById("cloudDay").src = "images/Cloud_day.png";
             break;
