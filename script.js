@@ -30,18 +30,25 @@ function whatTimeIsIt() {
     switch(true){
         case (hour >= 18 && hour < 24): //UREN
             document.getElementById("background").className = "evening";
+            document.getElementById("cloudDay").src = "images/Cloud_evening.png";
+            document.getElementById("cloudDay").className = "cloudEvening";
             break;
 
         case (hour >= 0 && hour < 6): //UREN
             document.getElementById("background").className = "night";
+            document.getElementById("cloudDay").src = "images/Cloud_night.png";
+            document.getElementById("cloudDay").className = "cloudNight";
             break;
                 
         case (hour >= 6 && hour < 12): //UREN
             document.getElementById("background").className = "morning";
+            document.getElementById("cloudDay").src = "images/Cloud_morning.png";
+            document.getElementById("cloudDay").className = "cloudMorning";
             break;
 
         case (hour >= 12 && hour < 18): //UREN
             document.getElementById("background").className = "day";
+            document.getElementById("cloudDay").src = "images/Cloud_day.png";
             break;
 
     };
@@ -56,4 +63,4 @@ var today = new Date();
 var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
 
 // Displays the result of the element id="date"
-document.getElementById('date').innerHTML = today.getDate() + ' ' + months[today.getMonth()] + ' ' +today.getFullYear();
+document.getElementById("date").innerHTML = today.getDate() + " " + months[today.getMonth()] + " " +today.getFullYear();

@@ -27,6 +27,12 @@
 body {
     background-color: #121212;
     padding: 15px;
+    overflow-x: hidden;
+}
+
+html{
+	height: 100vh;
+    width: 100%;
 }
 
 
@@ -39,7 +45,7 @@ body {
     /* Do not repeat the image */
     background-repeat: no-repeat; 
     /* Background image is fixed in the viewport so that it doesn’t move when the content’s height is greater than the image’s height */
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     /* Resize the background image to cover the entire container */
     background-size: cover; 
     /* Set a background color that will be displayed while the background image is loading */
@@ -50,7 +56,7 @@ body {
     background-image: url("images/Night.jpg");
     background-position: center center; 
     background-repeat: no-repeat; 
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover; 
     background-color: rgb(0, 30, 73);
 }
@@ -59,7 +65,7 @@ body {
     background-image: url("images/Morning.jpg");
     background-position: center center; 
     background-repeat: no-repeat; 
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover; 
     background-color: rgb(255, 77, 41);
 }
@@ -68,7 +74,7 @@ body {
     background-image: url("images/Day.jpg");
     background-position: center center; 
     background-repeat: no-repeat; 
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover; 
     background-color: rgb(169, 213, 255);
 }
@@ -96,7 +102,8 @@ body {
 	grid-row-gap: 15px;
     grid-auto-rows: auto auto;
     grid-auto-columns: auto auto;
-	padding-top: 30px;
+    padding-top: 30px;
+    position: relative;
 }
 
 /* Applying the grid */
@@ -108,6 +115,7 @@ section {
     background-color:rgb(255, 255, 255, 0.6);
     border-radius: 10px;
     padding: 10px;
+    z-index: 1;
 }
 
 /* Styling the time */
@@ -120,6 +128,22 @@ section {
     text-align: center;
 }
 
+.day #displayTime {
+    color: #596dff;
+}
+
+.evening #displayTime {
+    color: #63003a;
+}
+
+.night #displayTime {
+    color: #001e49;
+}
+
+.morning #displayTime {
+    color: #d43839;
+}
+
 /* Styling the date */
 #date {
     font-family: "GothamLight", Helvetica, sans-serif;
@@ -128,6 +152,84 @@ section {
     line-height: 16px;
     margin-top: 10px;
     text-align: center;
+}
+
+/* Styling the clouds */
+.cloudDay {
+    width: auto;
+    height: 100px;
+}
+
+img#cloudDay.cloudEvening {
+    width: auto;
+    height: 60px;
+}
+
+img#cloudDay.cloudNight {
+    width: auto;
+    height: 70px;
+}
+
+img#cloudDay.cloudMorning {
+    width: auto;
+    height: 130px;
+}
+
+/* The animation of the clouds */
+#cloud {
+    position: absolute;
+    top: 100px;
+    animation-name: cloud;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+#cloud img#cloudDay.cloudEvening {
+    position: absolute;
+    top: 80px;
+    animation-name: cloudevening;
+}
+
+#cloud img#cloudDay.cloudNight {
+    position: absolute;
+    top: 90px;
+    animation-name: cloudevening;
+}
+
+#cloud img#cloudDay.cloudMorning {
+    position: absolute;
+    top: 30px;
+    animation-name: cloudmorning;
+}
+
+/* Specifies the animation code */
+@keyframes cloud {
+    0% { 
+       left: -570px;
+   }
+   100%{
+       left: 100%;
+   }
+}
+
+@keyframes cloudevening {
+    0% { 
+       left: -100px;
+   }
+   100%{
+       left: 80%;
+   }
+}
+
+@keyframes cloudmorning {
+    0% { 
+       left: -60px;
+   }
+   100%{
+       left: 80%;
+   }
 }
 
 
@@ -228,6 +330,10 @@ section {
         margin-left: auto;
 		margin-right: auto;
 		max-width: 2560px;
+    }
+
+    .data-clock {
+        grid-column: 4 / span 6;
     }
 
     section {
