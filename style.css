@@ -29,11 +29,6 @@ body {
     padding: 15px;
 }
 
-html {
-    height: 85%;
-    width: 100%;
-}
-
 
 /* Setting the background */
 .evening {
@@ -119,8 +114,8 @@ section {
 #displayTime {
     font-family: "GothamBold", Helvetica, sans-serif;
     color: var(--primary);
-    font-size: 30px;
-    line-height: 26px;
+    font-size: 32px;
+    line-height: 24px;
     margin-top: 15px;
     text-align: center;
 }
@@ -129,8 +124,8 @@ section {
 #date {
     font-family: "GothamLight", Helvetica, sans-serif;
     color: var(--primary);
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 16px;
     margin-top: 10px;
     text-align: center;
 }
@@ -139,26 +134,115 @@ section {
 /* The breakpoints */
 
 /* Intermediate version of mobile and tablet (450px) */
-/* @media (min-width: 450px) {
-    
-} */
+@media (min-width: 450px) {
+    .data-clock {
+        grid-column: 2 / span 10;
+    }
+
+    section {
+        padding: 13px;
+    }
+
+    #displayTime {
+        font-size: 36px;
+        line-height: 28px;
+        margin-top: 18px;
+    }
+
+    #date {
+        font-size: 24px;
+        line-height: 22px;
+        margin-top: 13px;
+    }
+}
 
 /* Tablet version (768px) */
-/* @media (min-width: 768px) {
-   
-} */
+@media (min-width: 768px) {
+    .dashboard-clock {
+        grid-gap: 30px;
+    }
+
+    .data-clock {
+        grid-column: 3 / span 8;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #displayTime {
+        font-size: 42px;
+        line-height: 28px;
+        margin-top: 22px;
+    }
+
+    #date {
+        font-size: 26px;
+        line-height: 22px;
+        margin-top: 18px;
+    }
+}
 
 /* Laptop version (1024px) */
-/* @media (min-width: 1024px) {
-    
-} */
+@media (min-width: 1024px) {
+    .dashboard-clock {
+        grid-gap: 35px;
+    }
+
+    #displayTime {
+        font-size: 50px;
+        line-height: 32px;
+        margin-top: 25px;
+    }
+
+    #date {
+        font-size: 30px;
+        line-height: 26px;
+        margin-top: 20px;
+    }
+}
 
 /* Intermediate version of laptop and desktop (1280px) */
-/* @media (min-width: 1280PX) {
-    
-} */
+@media (min-width: 1280PX) {
+    section {
+        padding: 30px;
+    }
+
+    #displayTime {
+        font-size: 60px;
+        line-height: 38px;
+        margin-top: 30px;
+    }
+
+    #date {
+        font-size: 34px;
+        line-height: 30px;
+        margin-top: 24px;
+    }
+}
 
 /* Desktop version (1920px) */
-/* @media (min-width: 1920PX) {
-    
-} */
+@media (min-width: 1920PX) {
+    .dashboard-clock {
+        grid-gap: 45px;
+        margin-left: auto;
+		margin-right: auto;
+		max-width: 2560px;
+    }
+
+    section {
+        padding: 45px;
+    }
+
+    #displayTime {
+        font-size: 80px;
+        line-height: 48px;
+        margin-top: 34px;
+    }
+
+    #date {
+        font-size: 40px;
+        line-height: 34px;
+        margin-top: 30px;
+    }
+}
