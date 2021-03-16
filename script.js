@@ -30,25 +30,30 @@ function whatTimeIsIt() {
     switch(true){
         case (hour >= 18 && hour < 24): //Hours
             document.getElementById("background").className = "evening";
+            document.getElementById("cloud").className = "cloudEvening";
             document.getElementById("cloudDay").src = "images/Cloud_evening.png";// Changes the clouds img
-            document.getElementById("cloudDay").className = "cloudEvening";
+            document.getElementById("cloudDay").className = "cloudEveningImg";
             break;
 
         case (hour >= 0 && hour < 6): //Hours
             document.getElementById("background").className = "night";
+            document.getElementById("cloud").className = "cloudNight";
             document.getElementById("cloudDay").src = "images/Cloud_night.png";// Changes the clouds img
-            document.getElementById("cloudDay").className = "cloudNight";
+            document.getElementById("cloudDay").className = "cloudNightImg";
             break;
                 
         case (hour >= 6 && hour < 12): //Hours
             document.getElementById("background").className = "morning";
+            document.getElementById("cloud").className = "cloudMorning";
             document.getElementById("cloudDay").src = "images/Cloud_morning.png";// Changes the clouds img
-            document.getElementById("cloudDay").className = "cloudMorning";
+            document.getElementById("cloudDay").className = "cloudMorningImg";
             break;
 
         case (hour >= 12 && hour < 18): //Hours
             document.getElementById("background").className = "day";
+            document.getElementById("cloud").className = "cloudDay";
             document.getElementById("cloudDay").src = "images/Cloud_day.png";
+            document.getElementById("cloudDay").className = "cloudDayImg";
             break;
 
     };
